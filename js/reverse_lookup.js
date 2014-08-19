@@ -30,8 +30,8 @@ var getCurrentPosition = function () {
                 if (results[0]) {
                     var location = results[0].formatted_address;
 
-                    $('#lblLatitude').html("Latitude: " + latitude);
-                    $('#lblLongitude').html("Longitude: " + longitude);
+                    $('#lblLatitude').html(latitude);
+                    $('#lblLongitude').html(longitude);
                     $('#lblAccuracy').html("Accuracy: " + accuracy + " metres");
                     $('#lblLocation').html("Location.. <br/>" + location);
                 } else {
@@ -61,3 +61,10 @@ var getCurrentPosition = function () {
         alert("Geolocation is not supported");
     }
 };
+
+
+
+function send()
+{
+	 alert("Latitude:" + $('#lblLatitude').html + "\n Longitude:"   $('#lblLongitude').html); 
+}

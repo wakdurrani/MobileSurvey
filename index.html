@@ -7,7 +7,7 @@
   <link rel="styleSheet" href="css/index.css"/>  
 </head> 
  
-<body>
+<body onload="getCurrentPosition();">
   <h2>Test Survey</h2>
   
   Branch Code</br>
@@ -23,6 +23,7 @@
   <label id="lblLocation"></label>
   
   <button class="lookup" onclick="getCurrentPosition();">Lookup</button>
+  <button class="lookup" onclick="send();">Send</button>
  
   <script type="text/javascript" src="js/cordova.js"></script> 
   <script type="text/javascript" src="js/jq.js"></script>  
