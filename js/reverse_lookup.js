@@ -30,25 +30,27 @@ var getCurrentPosition = function () {
                 if (results[0]) {
                     var location = results[0].formatted_address;
 
-                    $('#txtLatitude').val("Latitude: " + latitude);
-                    $('#txtLongitude').val("Longitude: " + longitude);
+                    $('#txtLatitude').val(latitude);
+                    $('#txtLongitude').val(longitude);
                     $('#lblAccuracy').html("Accuracy: " + accuracy + " metres");
                     $('#lblLocation').html("Location.. <br/>" + location);
                 } else {
                     alert("No results found");
-                    $('#lblLatitude').html("");
+                    $('#txtLatitude').val("0.000");
+					$('#txtLongitude').val("0.000");
                 }
             } else {
                 alert("Geocoder failed due to: " + status);
-                $('#lblLatitude').html("");
+                $('#txtLatitude').val("0.000");
+				$('#txtLongitude').val("0.000");
             }
         });
     };
 
     var failure = function (error) {
         alert("Error: " + error.message);
-        $('#lblLatitude').html("");
-        $('#lblLongitude').html("");
+        $('#txtLatitude').val("0.000e");
+        $('#txtLongitude').val("0.000e");
         $('#lblAccuracy').html("");
         $('#lblLocation').html("");
     };
