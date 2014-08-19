@@ -42,6 +42,13 @@ label
     margin-top: -10px;
 }
 
+.label_field
+{
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 label:first-letter
 {
 	font-weight: bold; 

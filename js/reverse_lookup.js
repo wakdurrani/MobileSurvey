@@ -6,8 +6,8 @@ $(document).ready(function () {
 
 var getCurrentPosition = function () {
 
-    $('#txtLatitude').val("Getting Location...");
-    $('#txtLongitude').val("Getting Location...");
+    $('#lblLatitude').html("Getting Location...");
+    $('#lblLongitude').html("Getting Location...");
     $('#lblAccuracy').html("");
     $('#lblLocation').html("");
 
@@ -30,27 +30,27 @@ var getCurrentPosition = function () {
                 if (results[0]) {
                     var location = results[0].formatted_address;
 
-                    $('#txtLatitude').val(latitude);
-                    $('#txtLongitude').val(longitude);
+                    $('#lblLatitude').html("Latitude: " + latitude);
+                    $('#lblLongitude').html("Longitude: " + longitude);
                     $('#lblAccuracy').html("Accuracy: " + accuracy + " metres");
                     $('#lblLocation').html("Location.. <br/>" + location);
                 } else {
                     alert("No results found");
-                    $('#txtLatitude').val("0.000");
-					$('#txtLongitude').val("0.000");
+                    $('#lblLatitude').html("");
+					$('#lblLongitude').html("");
                 }
             } else {
                 alert("Geocoder failed due to: " + status);
-                $('#txtLatitude').val("0.000");
-				$('#txtLongitude').val("0.000");
+                $('#lblLatitude').html("");
+				$('#lblLongitude').html("");
             }
         });
     };
 
     var failure = function (error) {
         alert("Error: " + error.message);
-        $('#txtLatitude').val("0.000e");
-        $('#txtLongitude').val("0.000e");
+        $('#lblLatitude').html("");
+        $('#lblLongitude').html("");
         $('#lblAccuracy').html("");
         $('#lblLocation').html("");
     };
