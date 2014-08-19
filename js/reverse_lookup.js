@@ -6,8 +6,8 @@ $(document).ready(function () {
 
 var getCurrentPosition = function () {
 
-    $('#txtLatitude').html("Getting Location...");
-    $('#txtLongitude').html("Getting Location...");
+    $('#txtLatitude').val("Getting Location...");
+    $('#txtLongitude').val("Getting Location...");
     $('#lblAccuracy').html("");
     $('#lblLocation').html("");
 
@@ -30,8 +30,8 @@ var getCurrentPosition = function () {
                 if (results[0]) {
                     var location = results[0].formatted_address;
 
-                    $('#txtLatitude').html("Latitude: " + latitude);
-                    $('#txtLongitude').html("Longitude: " + longitude);
+                    $('#txtLatitude').val("Latitude: " + latitude);
+                    $('#txtLongitude').val("Longitude: " + longitude);
                     $('#lblAccuracy').html("Accuracy: " + accuracy + " metres");
                     $('#lblLocation').html("Location.. <br/>" + location);
                 } else {
