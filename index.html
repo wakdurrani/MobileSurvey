@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta name="viewport" content="width=device-width;height=device-height; user-scalable=no" /> 
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8"> 
+  <title>Test Survey</title> 
+  <link rel="styleSheet" href="css/index.css"/>  
+</head> 
+ 
+<body>
+  <h2>Test Survey</h2>
+  
+  <form>
+  Branch Code</br>
+  <input type=text id="txtCode"></br></br>
+  
+  Latitude</br>
+  <input type=text id="txtLatitude"></br></br>
+  
+  Longitude </br>
+  <input type=text id="txtLongitude"></br></br>
+ 
+<label id="lblAccuracy"></label><br /><br />
+  <label id="lblLocation"></label>
+  
+  <button class="lookup" onclick="getCurrentPosition();">Lookup</button>
+  
+  </form>
+ 
+  <script type="text/javascript" src="js/cordova.js"></script> 
+  <script type="text/javascript" src="js/jq.js"></script>  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+  <script src="js/reverse_lookup.js"></script>
+</body> 
+</html> 
