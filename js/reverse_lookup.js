@@ -61,10 +61,3 @@ var getCurrentPosition = function () {
         alert("Geolocation is not supported");
     }
 };
-
-
-
-function send()
-{
-	 alert("Latitude:" + $('#lblLatitude').html + "\n Longitude:"   $('#lblLongitude').html); 
-}
