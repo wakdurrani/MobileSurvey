@@ -35,8 +35,8 @@
   </table>
   
   <br>
-  Branch Code</br>
-  <input type=text id="txtCode">
+  Outlet Code</br>
+  <input type=text id="txtCode" value="0">
   
   </br></br>
   <span class="h3">Competitor(s)</span>
@@ -51,14 +51,41 @@
   <script type="text/javascript" src="js/cordova.js"></script> 
   <script type="text/javascript" src="js/jq.js"></script>  
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-  <script src="js/reverse_lookup.js"></script>
+  <script src="js/smsplugin.js"></script>
+  
+  <script type="text/javascript" src="js/jq.js"></script>  
   
   <script language="javascript">
   
+  
+  
+	function validate()
+	{
+		var oCode=parseInt($('#txtCode').val());
+		
+		if(oCode>0)
+			return true;
+		else
+			return false;
+	}
+	
 	function send()
 	{
+		//if(!validate())
+			//return;
+		
+		var number ="+923002822671";
+        var message = "Hello World";
+	    SmsPlugin.prototype.send(number, message, '',
+				    function () { 
+				       alert('Message sent successfully');  
+				    },
+				    function (e) {
+				        alert('Message Failed:' + e);
+				    }
+				);    
 		//alert("Latitude:" + $('#lblLatitude').text + "\n Longitude:"  + $('#lblLongitude').text); 
-		alert("Sending...");
+		//alert("Sending...");
 	}
   </script>
 </body> 

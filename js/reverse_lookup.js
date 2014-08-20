@@ -32,8 +32,8 @@ var getCurrentPosition = function () {
 
                     $('#lblLatitude').html(latitude);
                     $('#lblLongitude').html(longitude);
-                    $('#lblAccuracy').html("Accuracy: " + accuracy + " metres");
-                    $('#lblLocation').html("Location.. <br/>" + location);
+                    $('#lblAccuracy').html(accuracy + " metres");
+                    $('#lblLocation').html(location);
                 } else {
                     alert("No results found");
                     $('#lblLatitude').html("");
