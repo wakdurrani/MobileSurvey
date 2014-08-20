@@ -9,20 +9,43 @@
  
 <body>
   <h2>Test Survey</h2>
+  <table style="width:100%">
+  <tr>
+	<td cols="2"> <span class="h3"> GPS Location </span></td>
+  </tr>
+  <tr>
+	<td style="width:50%;">Latitude</td>
+	<td style="width:50%;">Longitude</td>
+  </tr>
+  <tr>
+	<td> <label id="lblLatitude" class="label_field"></label></td>
+	<td> <label id="lblLongitude" class="label_field"></label></td>
+  </tr>
+  <tr>
+	<td>Accuracy</td>
+	<td>Place</td>
+  </tr>
+  <tr>
+	<td> <label id="lblAccuracy" class="label_field"></label></td>
+	<td> <label id="lblLocation" class="label_field"></label></td>
+  </tr>
+   <tr>
+	<td colspan="2" style="text-align:right;" ><button class="lookup" onclick="getCurrentPosition();">Lookup</button></td>
+  </tr>
+  </table>
   
+  <br>
   Branch Code</br>
-  <input type=text id="txtCode"></br></br>
+  <input type=text id="txtCode">
   
-  Latitude</br>
-  <label id="lblLatitude" class="label_field"></label><br /><br />
-  
-  Longitude </br>
-  <label id="lblLongitude" class="label_field"></label><br /><br />
+  </br></br>
+  <span class="h3">Competitor(s)</span>
+  <div id="divCheckBoxes" style="" class="chkBoxesContainer">
+	<input type="checkbox" id="chk11" value="11"> UBL Omni </br>
+	<input type="checkbox" id="chk12" value="12"> Easy Paisa </br>
+	<input type="checkbox" id="chk13" value="13"> MobiCash </br>
+  </div>
  
- <label id="lblAccuracy"></label><br /><br />
-  <label id="lblLocation"></label>
-  
-  <button class="lookup" onclick="getCurrentPosition();">Lookup</button>
   <button class="lookup" onclick="send();">Send</button>
  
   <script type="text/javascript" src="js/cordova.js"></script> 
@@ -34,7 +57,8 @@
   
 	function send()
 	{
-		alert("Latitude:" + $('#lblLatitude').html + "\n Longitude:"  + $('#lblLongitude').html); 
+		//alert("Latitude:" + $('#lblLatitude').text + "\n Longitude:"  + $('#lblLongitude').text); 
+		alert("Sending...");
 	}
   </script>
 </body> 

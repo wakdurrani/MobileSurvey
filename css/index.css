@@ -13,7 +13,7 @@
 	padding: 0.7em 0.1em;
 	clear: none;
 	float: left;
-	width: 25%;
+	width: 180px;
 	margin: 6px 3px 3px;
 }
 
@@ -35,6 +35,13 @@ h2
 	text-shadow: #FFFFFF 0px 1px 1px;
 }
 
+.h3 
+{ 
+	color: #e87a12;
+	font-size: 1em;
+	font-weight: bold;
+}
+
 label 
 {
     display: block;
@@ -42,11 +49,33 @@ label
     margin-top: -10px;
 }
 
+input[type=text]
+{
+	width:100%;
+	font-size:1.5em;
+}
+
+input[type=checkbox]
+{
+	margin-bottom:10px;
+}
+
+.chkBoxesContainer
+{
+	font-size:1.1em;
+	width:100%;height:100px;overflow:auto;border:solid 1px;
+}
+
 .label_field
 {
     display: block;
     margin-bottom: 0px;
     margin-top: 0px;
+	height:30px;
+	border:solid 1px;
+	font-size:1em;
+	background-color:#E6E6E6;
+	overflow:nowrap;
 }
 
 label:first-letter
